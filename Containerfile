@@ -14,5 +14,8 @@ RUN flutter config --no-analytics
 RUN flutter config --no-enable-web
 RUN flutter config --no-enable-android
 
+RUN mkdir /project
+WORKDIR /project
+
 ENTRYPOINT [ "flutter" , "--no-version-check" ]
 CMD [ "--help" ]
