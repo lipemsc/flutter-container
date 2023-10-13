@@ -34,5 +34,8 @@ RUN echo -e "y\ny\ny\ny\ny\ny" | flutter doctor --android-licenses
 RUN flutter config --no-enable-web
 RUN flutter config --no-enable-linux-desktop
 
+RUN mkdir /project
+WORKDIR /project
+
 ENTRYPOINT [ "flutter" , "--no-version-check" ]
 CMD [ "--help" ]
